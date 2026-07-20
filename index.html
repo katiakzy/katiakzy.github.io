@@ -36,9 +36,21 @@
     --teal-text:#1E453D;
     --maxw:1150px;
     --header-bg:rgba(247,242,234,0.92);
+    --venn-a:#F1E0C7;
+    --venn-b:#DCEAE6;
+    --venn-a-text:#7A5321;
+    --venn-b-text:#1E453D;
+    --venn-ink:#2B2430;
+    --venn-sub:#7A7180;
   }
   html[data-theme="dark"]{
     --header-bg:rgba(27,23,18,0.9);
+    --venn-a:#4A3620;
+    --venn-b:#1E3833;
+    --venn-a-text:#F0C489;
+    --venn-b-text:#9FDCC9;
+    --venn-ink:#F2ECDF;
+    --venn-sub:#B3A996;
     --bg:#1B1712;
     --panel:#242019;
     --panel-2:#2D271E;
@@ -136,7 +148,7 @@
   .btn-whatsapp:hover{background:#358F60;}
 
   /* VENN DIAGRAM */
-  .venn-card{background:#FFFFFF; border:1px solid var(--line); border-radius:20px; padding:28px; position:relative;}
+  .venn-card{background:var(--panel); border:1px solid var(--line); border-radius:20px; padding:28px; position:relative;}
   .venn-cap{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-dim); text-transform:uppercase; letter-spacing:.08em; text-align:center; margin-bottom:6px;}
   svg{display:block; width:100%; height:auto;}
   .venn-label{font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:500;}
@@ -257,18 +269,18 @@
     <div class="venn-card">
       <div class="venn-cap">DUAS PRÁTICAS, UMA MESMA ESCUTA</div>
       <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" aria-label="Diagrama com dois círculos sobrepostos representando Recrutamento de Tecnologia e Psicologia Clínica">
-        <circle cx="165" cy="150" r="112" fill="#F1E0C7" opacity="0.9"/>
-        <circle cx="255" cy="150" r="112" fill="#DCEAE6" opacity="0.9"/>
-        <text class="venn-label" x="115" y="95" text-anchor="middle" fill="#7A5321">RECRUTAMENTO</text>
-        <text class="venn-label" x="115" y="112" text-anchor="middle" fill="#7A5321">DE TECNOLOGIA</text>
-        <text class="venn-label" x="305" y="95" text-anchor="middle" fill="#1E453D">PSICOLOGIA</text>
-        <text class="venn-label" x="305" y="112" text-anchor="middle" fill="#1E453D">CLÍNICA</text>
-        <text class="venn-label" x="210" y="155" text-anchor="middle" fill="#2B2430" font-size="13" font-weight="600">KATIA</text>
-        <text class="venn-label" x="210" y="172" text-anchor="middle" fill="#2B2430" font-size="10">escuta · ética · cuidado</text>
-        <text class="mono" x="115" y="235" text-anchor="middle" fill="#7A5321" font-size="10">Java · .NET · Python</text>
-        <text class="mono" x="115" y="250" text-anchor="middle" fill="#7A5321" font-size="10">Angular · React · Dados</text>
-        <text class="mono" x="305" y="235" text-anchor="middle" fill="#1E453D" font-size="10">TCC · Psic. Positiva</text>
-        <text class="mono" x="305" y="250" text-anchor="middle" fill="#1E453D" font-size="10">Constelação Familiar</text>
+        <circle cx="165" cy="150" r="112" fill="var(--venn-a)" opacity="0.9"/>
+        <circle cx="255" cy="150" r="112" fill="var(--venn-b)" opacity="0.9"/>
+        <text class="venn-label" x="115" y="95" text-anchor="middle" fill="var(--venn-a-text)">RECRUTAMENTO</text>
+        <text class="venn-label" x="115" y="112" text-anchor="middle" fill="var(--venn-a-text)">DE TECNOLOGIA</text>
+        <text class="venn-label" x="305" y="95" text-anchor="middle" fill="var(--venn-b-text)">PSICOLOGIA</text>
+        <text class="venn-label" x="305" y="112" text-anchor="middle" fill="var(--venn-b-text)">CLÍNICA</text>
+        <text class="venn-label" x="210" y="155" text-anchor="middle" fill="var(--venn-ink)" font-size="13" font-weight="600">KATIA</text>
+        <text class="venn-label" x="210" y="172" text-anchor="middle" fill="var(--venn-sub)" font-size="10">escuta · ética · cuidado</text>
+        <text class="mono" x="115" y="235" text-anchor="middle" fill="var(--venn-a-text)" font-size="10">Java · .NET · Python</text>
+        <text class="mono" x="115" y="250" text-anchor="middle" fill="var(--venn-a-text)" font-size="10">Angular · React · Dados</text>
+        <text class="mono" x="305" y="235" text-anchor="middle" fill="var(--venn-b-text)" font-size="10">TCC · Psic. Positiva</text>
+        <text class="mono" x="305" y="250" text-anchor="middle" fill="var(--venn-b-text)" font-size="10">Constelação Familiar</text>
       </svg>
     </div>
   </div>
