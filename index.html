@@ -480,7 +480,7 @@
 <footer>© 2026 Katia Krizyzanovski Santos — São Paulo, Brasil</footer>
 
 <script>
-  // Tema: parte da preferência do sistema, com alternância manual em memória (sem storage persistente).
+  // Tema padrão: escuro. Alternância manual disponível pelo botão (não persiste entre visitas).
   const root = document.documentElement;
   const toggleBtn = document.getElementById('themeToggle');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
@@ -488,18 +488,11 @@
   function applyTheme(mode){
     root.setAttribute('data-theme', mode);
   }
-  applyTheme(prefersDark.matches ? 'dark' : 'light');
+  applyTheme('dark');
 
   toggleBtn.addEventListener('click', () => {
     const current = root.getAttribute('data-theme');
     applyTheme(current === 'dark' ? 'light' : 'dark');
-  });
-
-  // Acompanha mudança de preferência do sistema enquanto o usuário não alternar manualmente
-  let manualOverride = false;
-  toggleBtn.addEventListener('click', () => { manualOverride = true; });
-  prefersDark.addEventListener('change', (e) => {
-    if(!manualOverride) applyTheme(e.matches ? 'dark' : 'light');
   });
 
   const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } }); }, {threshold:0.12});
